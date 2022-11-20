@@ -1,6 +1,6 @@
 <?php
 
-$conexion = mysqli_connect("localhost", "root", "", "Ciclo", 3310);
+$conexion = mysqli_connect("localhost", "root", "", "Ciclo", 3306);
 
 $sql = "SELECT img,nombre,precio FROM gafas";
 

@@ -27,6 +27,7 @@ body {
 .banner-img {
   width: 100%;
   height: 20%;
+  margin-bottom: 20px;
 }
 
 .banner-img-taller {
@@ -549,6 +550,71 @@ h3 {
 
 .equipo p {
   color: var(--negro);
+  font-weight: lighter;
+  font-size: larger;
+}
+
+
+
+
+/******************************************************   BICICLETAS  ******************************************************************/
+
+.imagen_bicicletas{
+  height: 268.650px;
+  background-image: url(img/casco.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.titulo_imagen {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0,);
+  color: var(--blanco);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contenedor_bici {
+  width: 1300px;
+  margin: auto;
+}
+
+.bicicletasGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+.bicicletas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+  box-shadow: 0px 5px 15px 0px rgba(112, 112, 112, 0.5);
+  padding:20px;
+  margin-top: 20px;
+}
+
+.bicicletas img {
+  height: 280px;
+  width: 380px;
+  border-radius: 10px;
+}
+
+.bicicletas h3 {
+  color: var(--negro);
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.bicicletas p {
+  color: var(--negro);
+  font-family: sans-serif;
   font-weight: lighter;
   font-size: larger;
 }

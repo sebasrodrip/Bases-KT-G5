@@ -48,6 +48,13 @@ nombre varchar(100) not null,
 precio int not null,
 primary key (id_gafa));
 
+drop table bicicletas;
+create table bicicletas(
+id_bicicletas int auto_increment not null,
+img varchar(100) not null,
+nombre varchar(100) not null,
+precio int not null,
+primary key (id_bicicletas));
 
 INSERT INTO usuario (nombre,apellido,usuario,contrasena)
 VALUES ('Andres','Diaz','andres1','123');
@@ -73,12 +80,19 @@ VALUES (1, 'scott_spur.jpg','Gafas de Sol Scott Spur',30000),
 (2, 'scott_shield.jpg','Gafas de Sol Scott Shield',25000),
 (3, 'scott_vector.jpg','Gafas de Sol Scott Vector',20000);
 
-SELECT * FROM mantenimientos;
+INSERT INTO bicicletas (id_bicicletas,img,nombre,precio)
+VALUES (1, 'rockhopper.jpg','Specialized Rockhopper',800000),
+(2, 'marlin-5.jpg','Treck Marlin-5',320000),
+(3, 'scalpel.jpg','Cannondale Scalpel',2200000),
+(4, 'orca.jpg','Orbea Orca M40',2150000),
+(5, 's-works.jpg','Specialized S-Works',3100000),
+(6, 'domane.jpg','Treck Domane SL-5',1850000);
+
+
+SELECT * FROM zapatillas;
 SELECT * FROM usuario;
 SELECT * FROM bicicletas;
 SELECT foto_bici as Fotografía, marca as Marca, arreglos as Arreglos_por_realizar FROM mantenimientos;
-
-
 
 
 
