@@ -11,7 +11,7 @@ function ajax() {
         console.log("Funciona creo");
         if (this.readyState == 4 && this.status == 200) {
             let data = JSON.parse(this.responseText);
-            cargarProductos(data);
+            cargarMantenimientos(data);
         }
     }
 }
