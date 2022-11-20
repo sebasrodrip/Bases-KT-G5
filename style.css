@@ -29,6 +29,11 @@ body {
   height: 20%;
 }
 
+.banner-img-taller {
+ height: 700px;
+  width: 100%;
+}
+
 .boton {
   margin-left: 20px;
   color: var(--blanco);
@@ -437,4 +442,21 @@ h3 {
 
 .card{
   background-color: #313131b9;
+}
+
+
+
+
+
+
+
+
+
+/******************************************************   TALLER  ******************************************************************/
+
+.mantenimientos {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 8px;
+  /* Espacio arriba y abajo entre las columnas */
 }
