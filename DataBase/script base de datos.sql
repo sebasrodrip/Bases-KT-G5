@@ -49,6 +49,20 @@ nombre varchar(100) not null,
 precio int not null,
 primary key (id_bicicletas));
 
+/* create table user_login(
+id_user int auto_increment not null primary key,
+user_nom varchar(20)null,
+user_mail varchar(20)null,
+user_mail_verified varchar(20)null,
+user_pass varchar(20)null,
+token varchar(20) null,
+
+fecha_creacion datetime null,
+fecha_update datetime null,
+fecha_eliminacion datetime null,
+estado varchar(10)
+); */
+
 INSERT INTO usuario (nombre,apellido,usuario,contrasena)
 VALUES ('Andres','Diaz','andres1','123');
 
