@@ -84,6 +84,14 @@ h3 {
   background-color: var(--gris);
 }
 
+/* Index */
+
+.link_index {
+  text-decoration: none; 
+  color: white;
+  font-size: 20px;
+}
+
 /* Contenido */
 
 /* Fin Servicios */
