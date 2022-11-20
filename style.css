@@ -475,3 +475,80 @@ h3 {
   gap: 8px;
   /* Espacio arriba y abajo entre las columnas */
 }
+
+/******************************************************   Equipo  ******************************************************************/
+
+.imagen_cascos{
+  height: 268.650px;
+  background-image: url(img/casco.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.imagen_zapatillas{
+  height: 268.650px;
+  background-image: url(img/zapatillas/zapatillas.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+
+.imagen_gafas{
+  height: 268.650px;
+  background-image: url(img/gafas/gafas.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+
+.titulo_imagen {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0,);
+  color: var(--blanco);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contenedor_equipo {
+  width: 1200px;
+  margin: auto;
+}
+
+.equipos {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+.equipo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+  box-shadow: 0px 5px 15px 0px rgba(112, 112, 112, 0.5);
+  padding:20px;
+  margin-top: 20px;
+}
+
+.equipo img {
+  height: 300px;
+  width: 300px;
+}
+
+.equipo h3 {
+  color: var(--negro);
+  font-weight: bold;
+}
+
+.equipo p {
+  color: var(--negro);
+  font-weight: lighter;
+  font-size: larger;
+}
