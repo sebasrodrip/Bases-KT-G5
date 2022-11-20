@@ -468,3 +468,10 @@ h3 {
   gap: 8px;
   /* Espacio arriba y abajo entre las columnas */
 }
+
+.bicicletas {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 8px;
+  /* Espacio arriba y abajo entre las columnas */
+}

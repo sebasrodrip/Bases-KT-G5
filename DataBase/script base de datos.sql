@@ -21,15 +21,25 @@ primary key (id_bicicleta),
 foreign key (id_usuario) references usuario(id_usuario)
 )engine=InnoDB;
 
-SELECT * FROM mantenimientos;
-SELECT * FROM usuario;
-SELECT foto_bici as Fotografía, marca as Marca, arreglos as Arreglos_por_realizar FROM mantenimientos;
+create table bicicletas(
+foto_bici varchar(20) not null,
+marca varchar(20) not null,
+descripcion varchar(200)
+);
 
 INSERT INTO usuario (nombre,apellido,usuario,contrasena)
 VALUES ('Andres','Diaz','andres1','123');
 
 INSERT INTO mantenimientos VALUES (1,'bici_totem.jpg',
 'Totem','Ajuste de suspensión',1);
+
+INSERT INTO bicicletas VALUES ('bici_totem.jpg',
+'Totem','Una poderosa bicicleta de montaña que brinda comodidad y estilo');
+
+SELECT * FROM mantenimientos;
+SELECT * FROM usuario;
+SELECT * FROM bicicletas;
+SELECT foto_bici as Fotografía, marca as Marca, arreglos as Arreglos_por_realizar FROM mantenimientos;
 
 
 
