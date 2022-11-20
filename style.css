@@ -463,10 +463,10 @@ h3 {
 
 /******************************************************   TALLER  ******************************************************************/
 
-.mantenimientos {
+.mantenimientosGrid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 8px;
+  gap: 12px;
   /* Espacio arriba y abajo entre las columnas */
 }
 

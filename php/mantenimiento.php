@@ -1,11 +1,11 @@
 <?php
 // Conexión a SQL
-$conexion = mysqli_connect("localhost", "root", "", "Ciclo", 3306);
+$conexion = mysqli_connect("localhost", "root", "", "Ciclo", 3310);
 
 //consulta en código SQL
 //$sql = "SELECT foto_bici as Fotografía, marca as Marca, arreglos as Arreglos_por_realizar FROM mantenimientos";
 
-$sql= "SELECT foto_bici, marca, arreglos FROM mantenimientos";
+$sql= "SELECT * FROM mantenimientos";
 
 
 //Este devuelve la respuesta de la consulta la base de datos

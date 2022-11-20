@@ -21,12 +21,6 @@ primary key (id_bicicleta),
 foreign key (id_usuario) references usuario(id_usuario)
 )engine=InnoDB;
 
-create table bicicletas(
-foto_bici varchar(20) not null,
-marca varchar(20) not null,
-descripcion varchar(200)
-);
-
 create table cascos(
 id_casco int auto_increment not null,
 img varchar(100) not null,
@@ -48,7 +42,6 @@ nombre varchar(100) not null,
 precio int not null,
 primary key (id_gafa));
 
-drop table bicicletas;
 create table bicicletas(
 id_bicicletas int auto_increment not null,
 img varchar(100) not null,
@@ -61,9 +54,6 @@ VALUES ('Andres','Diaz','andres1','123');
 
 INSERT INTO mantenimientos VALUES (1,'bici_totem.jpg',
 'Totem','Ajuste de suspensión',1);
-
-INSERT INTO bicicletas VALUES ('bici_totem.jpg',
-'Totem','Una poderosa bicicleta de montaña que brinda comodidad y estilo');
 
 INSERT INTO cascos (id_casco,img,nombre,precio)
 VALUES (1, 'scott_nero_plus.jpg','Casco Scott Nero Plus (CE Y CPSC)',230000),
