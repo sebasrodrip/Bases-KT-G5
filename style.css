@@ -80,10 +80,29 @@ h3 {
   padding: 25px;
 }
 
-.nav_principal a:hover {
+.nav_principal button {
+  color: var(--blanco);
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 25px;
+  background-color: var(--negro);
+  border:none;
+}
+
+
+.nav_principal a:hover{
   color: var(--blanco);
   background-color: var(--gris);
 }
+
+.nav_principal button:hover{
+  color: var(--blanco);
+  background-color: var(--gris);
+}
+
+
+
 
 /* Index */
 
@@ -617,4 +636,18 @@ h3 {
   font-family: sans-serif;
   font-weight: lighter;
   font-size: larger;
+}
+
+/* Modal */
+
+.modal-content {
+  background-color: var(--negro);
+}
+
+.modal-title {
+  color: var(--blanco);
+}
+
+.modal-body label{
+  color:var(--blanco);
 }

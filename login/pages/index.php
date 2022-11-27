@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../../style.css">
 </head>
 
 <body>
@@ -21,7 +21,7 @@
         <a href="taller.html">Taller</a>
         <a href="sobreNosotros.html">Sobre Nosotros</a>
         <button type="button" data-toggle="modal" data-target="#exampleModalCenter">
-          Ingresar
+          Cerrar sesion
         </button>
         <svg style="text-align: right;" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
           class="bi bi-cart-fill" viewBox="0 0 16 16">
@@ -33,7 +33,7 @@
   </header>
 
 
-<!-- Modal Login -->
+<!-- Modal Login
 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
@@ -67,7 +67,7 @@
     </div>
   </div>
 </div>
-<!--Fin login modal-->
+Fin login modal-->
 
     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-indicators">
@@ -135,6 +135,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script> <!--Cambiar jQuery slim min a solo min con este script-->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script> <!--Integrar en todos los html que contengan navbar-->
-<script src="JavaScript/modal.js"></script> <!--Integrar en todos los html que contengan navbar-->
+<script src="../../JavaScript/modal.js"></script> <!--Integrar en todos los html que contengan navbar-->
 
 </html>
