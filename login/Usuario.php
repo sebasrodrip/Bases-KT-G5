@@ -36,7 +36,7 @@ class Usuario
         $conexion->cerrar();
 
         if (!empty($dataArray)){
-            return new Usuario($dataArray[0],/*$dataArray[1], $dataArray[2],*/$dataArray[1],$dataArray[2]);
+            return new Usuario($dataArray[0],/*$dataArray[1], $dataArray[2],*/$dataArray[3],$dataArray[4]);
         }
 
         return false;
