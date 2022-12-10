@@ -24,37 +24,52 @@
         <a href="ubicacion.html">Ubicación</a>
         <a href="taller.html">Taller</a>
         <a href="sobreNosotros.html">Sobre Nosotros</a>
-        <svg style="text-align: right;" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-          class="bi bi-cart-fill" viewBox="0 0 16 16">
-          <path
-            d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
-        </svg>
       </nav>
     </div>
   </header>
 
   <img src="img/taller.jpg" class="banner-img-taller" alt="">
+  <br><br>
 
-  <section class="contenedor_bici">
-    <!-- *********************************************  Sección de Taller  ********************************************************************************************** -->
+  <h2>Agregar bicicleta a mantenimiento</h2>
+  <br>
+  <section class="contenedor producto">
 
-    <h2>Mantenimientos en curso</h2>
+    <form class="form" action="controller/taller.php" method="post">
+      <div>
+        <div class="form_campo">
+          <label for="foto_bici">Nombre de la imagen</label>
+          <input id="foto_bici" class="form_text" type="text" placeholder="Ingrese el nombre de la imagen">
+        </div>
 
-    <div id="mantenimiento" class="mantenimientosGrid">
+        <div class="form_campo">
+          <label for="marca">Marca</label>
+          <input id="marca" class="form_text" type="text" placeholder="Ingrese la marca">
+        </div>
 
-    </div>
+        <div class="form_campo">
+          <label for="arreglos">Arreglos</label>
+          <textarea id="arreglos" class="form_text" placeholder="Ingrese los arreglos que se necesitan"></textarea>
+        </div>
+      </div>
 
-    <br>
+      <div class="form_campo">
+        <label for="id_usuario">ID de Usuario</label>
+        <input id="id_usuario" class="form_text" type="text" placeholder="Escriba la identificación del usuario">
+      </div>
 
-    <!-- <button id="agregar" class="boton"><a href="index.html">Agregar</a></button> -->
-    <a class="boton" href="agregarMantenimiento.html">Agregar</a>
-    <!-- <a class="boton" href="/php/eliminarMantenimiento.php">Eliminar</a> -->
-
-    <br><br>
+      <div>
+        <input class="boton enviar" type="submit" value="Agregar">
+      </div>
+    </form>
 
   </section>
 
-  <!-- ********************************************* Fin Sección de Taller  ********************************************************************************************** -->
+  <br><br>
+
+  </section>
+
+
 
 
   <footer>
