@@ -56,16 +56,12 @@ function cargarCascos(cascos){
     
         const precioCasco = document.createElement("p");
         precioCasco.innerHTML = `${precio} ₡`;
-        
-        const botonAgregar = document.createElement("div");
-        botonAgregar.innerHTML = "<button type=\"button\" class=\"btn btn-dark\">Agregar</button>";
     
         const CascoDiv = document.createElement("div");
         CascoDiv.classList.add("equipo");
         CascoDiv.appendChild(imgCasco);
         CascoDiv.appendChild(nombreCasco);
         CascoDiv.appendChild(precioCasco);
-        CascoDiv.appendChild(botonAgregar);
     
         document.querySelector("#cascos").appendChild(CascoDiv);
     });
@@ -87,16 +83,12 @@ function cargarZapatillas(zapatillas){
     
         const precioZapatilla = document.createElement("p");
         precioZapatilla.innerHTML = `${precio} ₡`;
-        
-        const botonAgregar = document.createElement("div");
-        botonAgregar.innerHTML = "<button type=\"button\" class=\"btn btn-dark\">Agregar</button>";
     
         const ZapatillaDiv = document.createElement("div");
         ZapatillaDiv.classList.add("equipo");
         ZapatillaDiv.appendChild(imgZapatilla);
         ZapatillaDiv.appendChild(nombreZapatilla);
         ZapatillaDiv.appendChild(precioZapatilla);
-        ZapatillaDiv.appendChild(botonAgregar);
     
         document.querySelector("#zapatillas").appendChild(ZapatillaDiv);
     });
@@ -118,16 +110,12 @@ function cargarGafas(gafas){
     
         const preciogafa = document.createElement("p");
         preciogafa.innerHTML = `${precio} ₡`;
-        
-        const botonAgregar = document.createElement("div");
-        botonAgregar.innerHTML = "<button type=\"button\" class=\"btn btn-dark\">Agregar</button>";
     
         const gafaDiv = document.createElement("div");
         gafaDiv.classList.add("equipo");
         gafaDiv.appendChild(imggafa);
         gafaDiv.appendChild(nombregafa);
         gafaDiv.appendChild(preciogafa);
-        gafaDiv.appendChild(botonAgregar);
     
         document.querySelector("#gafas").appendChild(gafaDiv);
     });
