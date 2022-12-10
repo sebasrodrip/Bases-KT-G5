@@ -8,9 +8,9 @@ $taller = new Taller(0,$_POST["foto_bici"], $_POST["marca"],
  $respuesta = $taller->create();
 
  if ($respuesta == "OK") {
-    header("location: ../agregarMantenimientos.html?codigo=1");
+    header("location: ../taller.html?codigo=1");
     exit();
  }
 
- header("location: ../agregarMantenimientos.html?codigo=4&error=" . $respuesta);
+ header("location: ../taller.html?codigo=4&error=" . $respuesta);
  exit();
