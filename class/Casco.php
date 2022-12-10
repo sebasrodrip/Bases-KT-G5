@@ -1,7 +1,7 @@
 <?php
-include "Conexion.php";
+include "Conexion_casco.php";
 
-class Casco extends Conexion
+class Casco extends Conexion_casco
 {
     private $id_casco;
     private $img;
@@ -10,35 +10,28 @@ class Casco extends Conexion
 
     public function __construct($id_casco,  $img, $nombre, $precio)
     {
-        $this->id_bicicleta = $id_bicicleta;
-        $this->foto_bici = $foto_bici;
-        $this->marca = $marca;
-        $this->arreglos = $arreglos;
-        $this->id_usuario = $id_usuario;
+        $this->id_casco = $id_casco;
+        $this->img = $img;
+        $this->nombre = $nombre;
+        $this->precio = $precio;
     }
 
-    // METODOS (CRUD => CREATE, READ, UPDATE, DELETE)
+    // CREATE
 
     public function create()
     {
         $this->conectar();
 
-        $query = "INSERT INTO mantenimientos(foto_bici, marca, arreglos, id_usuario)" .
-                "VALUES(?, ?, ?, ?)";
+        $query = "INSERT INTO cascos(img, nombre, precio)" .
+                "VALUES(?, ?, ?)";
 
         $prepare = mysqli_prepare($this->link, $query);
 
-        // s => cadenas de texto
-        // d => doble
-        // i => entero
-        // b => binarios
-
         $prepare->bind_param(
-            "ssss",
-            $this->foto_bici,
-            $this->marca,
-            $this->arreglos,
-            $this->id_usuario
+            "ssi",
+            $this->img,
+            $this->nombre,
+            $this->precio
         );
 
         if ($prepare->execute()) {
@@ -50,7 +43,6 @@ class Casco extends Conexion
         }
         
     }
-
     // METODOS READ [STATIC]
 
     public static function getAll()
@@ -58,7 +50,7 @@ class Casco extends Conexion
         $conexion = new Conexion();
         $conexion->conectar();
 
-        $query = "SELECT * FROM mantenimientos";
+        $query = "SELECT * FROM cascos";
 
         $prepare = mysqli_prepare($conexion->link, $query);
         $prepare->execute();
@@ -66,14 +58,14 @@ class Casco extends Conexion
         $respuesta = $prepare->get_result();
         $dataArray = $respuesta->fetch_all();
 
-        $mantenimientos = [];
+        $cascos = [];
 
         foreach ($dataArray as $data) {
-            $mantenimiento = new Taller($data[0], $data[1], $data[2], $data[3], $data[4]);
-            array_push($mantenimientos, $mantenimiento);
+            $casco = new Taller($data[0], $data[1], $data[2], $data[3], $data[4]);
+            array_push($cascos, $casco);
         }
 
-        return $mantenimientos;
+        return $cascos;
     }
 
 
@@ -81,28 +73,24 @@ class Casco extends Conexion
     // METODOS GET Y SET
 
 
-    public function getId_bicicleta(): int
+    public function getId_casco(): int
     {
-        return $this->id_bicicleta;
+        return $this->id_casco;
     }
 
-    public function getFoto_bici(): string
+    public function getImg(): string
     {
-        return $this->foto_bici;
+        return $this->img;
     }
 
-    public function getMarca(): string
+    public function getNombre(): string
     {
-        return $this->marca;
+        return $this->nombre;
     }
 
-    public function getArreglos(): string
+    public function getPrecio(): int
     {
-        return $this->arreglos;
+        return $this->precio;
     }
 
-    public function getId_usuario(): string
-    {
-        return $this->id_usuario;
-    }
 }

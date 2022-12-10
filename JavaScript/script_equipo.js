@@ -56,7 +56,7 @@ function cargarCascos(cascos){
     
         const precioCasco = document.createElement("p");
         precioCasco.innerHTML = `${precio} ₡`;
-    
+
         const CascoDiv = document.createElement("div");
         CascoDiv.classList.add("equipo");
         CascoDiv.appendChild(imgCasco);

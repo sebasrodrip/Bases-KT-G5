@@ -20,41 +20,47 @@
       <nav class="nav_principal contenedor">
         <a href="index.html">Inicio</a>
         <a href="bicicletas.html">Bicicletas</a>
-        <a href="equipo.html">Equipo</a>
+        <a href="equipo.php">Equipo</a>
         <a href="ubicacion.html">Ubicación</a>
         <a href="taller.html">Taller</a>
         <a href="sobreNosotros.html">Sobre Nosotros</a>
       </nav>
     </div>
   </header>
-  
+
   <br><br>
 
   <h2>Agregar equipo</h2>
   <br>
   <section class="contenedor producto">
 
-    <form class="form" action="controller/taller.php" method="post">
+    <form class="form" action="controller/equipo.php" method="post">
+
+        <div class="form_campo">
+            <label for="cat_equipo">Categoria del equipo</label>
+            <select class="form_text" name="cat_equipo" id="cat_equipo">
+                <option value="0">--- Seleccione una categoria ---</option>
+                <option value="Casco">Casco</option>
+                <option value="Gafas">Gafas</option>
+                <option value="Zapatillas">Zapatillas</option>
+            </select>
+        </div>
+
       <div>
         <div class="form_campo">
-          <label for="foto_bici">Nombre de la imagen</label>
-          <input id="foto_bici" name="foto_bici" class="form_text" type="text" placeholder="Ingrese el nombre de la imagen">
+          <label for="img">Nombre de la imagen</label>
+          <input id="img" name="img" class="form_text" type="text" placeholder="Ingrese el nombre de la imagen">
         </div>
 
         <div class="form_campo">
-          <label for="marca">Marca</label>
-          <input id="marca" name="marca" class="form_text" type="text" placeholder="Ingrese la marca">
+          <label for="nombre">Nombre</label>
+          <input id="nombre" name="nombre" class="form_text" type="text" placeholder="Ingrese el nombre">
         </div>
 
         <div class="form_campo">
-          <label for="arreglos">Arreglos</label>
-          <textarea id="arreglos" name="arreglos" class="form_text" placeholder="Ingrese los arreglos que se necesitan"></textarea>
+          <label for="precio">Precio</label>
+          <input id="precio" name="precio" type="number" class="form_text" placeholder="Ingrese el precio del equipo"/>
         </div>
-      </div>
-
-      <div class="form_campo">
-        <label for="id_usuario">ID de Usuario</label>
-        <input id="id_usuario" name="id_usuario" class="form_text" type="text" placeholder="Escriba la identificación del usuario">
       </div>
 
       <div>

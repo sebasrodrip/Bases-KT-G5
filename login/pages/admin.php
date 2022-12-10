@@ -25,7 +25,7 @@
       <nav class="nav_principal contenedor">
         <a href="admin.php">Usuarios</a>
         <a href="bicicletas.html">Bicicletas</a>
-        <a href="equipo.html">Equipo</a>
+        <a href="equipo.php">Equipo</a>
         <a href="ubicacion.html">Ubicación</a>
         <a href="taller.html">Taller</a>
         <button type="button">Cerrar Sesion</button>
