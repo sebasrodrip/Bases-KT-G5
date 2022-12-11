@@ -68,8 +68,8 @@ class Bicicleta extends Conexion_bicicleta
         $bicicletas = [];
 
         foreach ($dataArray as $data) {
-            $bicicletas = new bicicletas($data[0], $data[1], $data[2], $data[3]);
-            array_push($bicicletas, $bicicleta);
+            $bicicletas = new bicicleta($data[0], $data[1], $data[2], $data[3]);
+            array_push($bicicletas);
         }
 
         return $bicicletas;
