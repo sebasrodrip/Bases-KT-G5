@@ -14,7 +14,7 @@ function ajaxBicicletas() {
 }
 
 function cargarBicicletas(bicicleta){
-    bicicleta.forEach(bicicleta => {
+    bicicleta.forEach(bicicleta => { 
         const img = bicicleta.img;
         const nombre = bicicleta.nombre;
         const precio = bicicleta.precio;
@@ -29,15 +29,13 @@ function cargarBicicletas(bicicleta){
         const precioBicicleta = document.createElement("p");
         precioBicicleta.innerHTML = `${precio} ₡`;
         
-        const botonAgregar = document.createElement("div");
-        botonAgregar.innerHTML = "<button type=\"button\" class=\"btn btn-dark\">Agregar</button>";
     
         const BicicletaDiv = document.createElement("div");
         BicicletaDiv.classList.add("bicicletas");
         BicicletaDiv.appendChild(imgBicicleta);
         BicicletaDiv.appendChild(nombreBicicleta);
         BicicletaDiv.appendChild(precioBicicleta);
-        BicicletaDiv.appendChild(botonAgregar);
+        
     
         document.querySelector("#bicicletas").appendChild(BicicletaDiv);
     });   

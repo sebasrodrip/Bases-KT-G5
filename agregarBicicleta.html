@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link rel="stylesheet" href="style.css">
-  <title>Bicicletas</title>
+  <title>Agregar Bicicleta</title>
 </head>
 
 <body>
@@ -24,82 +24,62 @@
         <a href="ubicacion.html">Ubicación</a>
         <a href="taller.html">Taller</a>
         <a href="sobreNosotros.html">Sobre Nosotros</a>
-        <svg style="text-align: right;" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-          class="bi bi-cart-fill" viewBox="0 0 16 16">
-          <path
-            d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
-        </svg>
       </nav>
     </div>
   </header>
 
   <img src="img/banner.jpg" class="banner-img" alt="">
+  <br><br>
 
-  <section class="contenedor_bici">
-    <!-- *********************************************  Sección de Bicicletas  ********************************************************************************************** -->
+  <h2>Agregar Bicicleta al Inventario</h2>
+  <br>
+  <section class="contenedor producto">
 
-    <h2>Catálogo de Bicicletas</h2>
+    <form class="form" action="controller/bicicleta.php" method="post">
+      <div>
+        <div class="form_campo">
+          <label for="img">Nombre de la imagen</label>
+          <input id="img" name="img" class="form_text" type="text" placeholder="Ingrese el nombre de la imagen">
+        </div>
 
-    <div id="bicicletas" class="bicicletasGrid">
+        <div class="form_campo">
+          <label for="nombre">Nombre de la Bicicleta</label>
+          <input id="nombre" name="nombre" class="form_text" type="text" placeholder="Ingrese el nombre de la bicicleta">
+        </div>
 
-    </div>
-
-    <section class="contenedor_equipo">
-      <div id="cascos" class="equipos">
-
+      <div class="form_campo">
+        <label for="precio">Precio de la Bicicleta</label>
+        <input id="precio" name="precio" class="form_text" type="text" placeholder="Escriba el precio de la bicicleta">
       </div>
-    </section>
 
-    <br>
-    <br>
-    <br>
-
-
-
-    <section class="contenedor_equipo">
-      <div id="zapatillas" class="equipos">
-
+      <div>
+        <input class="boton enviar" type="submit" value="Agregar">
       </div>
-    </section>
+    </form>
 
-    <br>
-    <br>
-    <br>
-
-
-    <section class="contenedor_equipo">
-      <div id="gafas" class="equipos">
-
-      </div>
-    </section>
-
-    <br>
-    <br>
-    <br>
-
-
-
-
-
-
-
-
-    <!-- ********************************************* Fin Sección de Bicicletas  ********************************************************************************************** -->
   </section>
+
+  <br><br>
+
+  </section>
+
+
+
 
   <footer>
     <div class="footer-bottom">
       <p>Horario: Lunes a Sabado 8 AM a 5 PM / Domingos Cerrado</p>
-      <p> <img src="img/redes/fb.png" alt="Auntoventas"> FideBikes <img src="img/redes/tw.png" alt=""> FideBikes
-      </p>
+      <p> <img src="img/redes/fb.png" alt="Auntoventas"> FideBikes <img src="img/redes/tw.png" alt=""> FideBikes</p>
       <p> <img src="img/redes/mail.png" alt="Auntoventas"> FideBikes@gmail.com <img src="img/redes/wp.png" alt="">
         FideBikes: 8888-8888 <br> </p>
     </div>
   </footer>
 
+
+  <script src="JavaScript/script_bicicletas.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
-  <script src="JavaScript/script_bicicletas.js"></script>
+
 
 </body>
 

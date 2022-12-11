@@ -628,6 +628,15 @@ h3 {
   margin-top: 20px;
 }
 
+.boton_AddBike h2{
+  color: var(--negro);
+  font-weight: bold;
+  font-size: 32px;
+  text-align: center;
+  margin-top: 10px;
+  padding-bottom: 10px;
+}
+
 .bicicletas img {
   height: 280px;
   width: 380px;
