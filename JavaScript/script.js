@@ -33,7 +33,6 @@ function cargarMantenimientos(mantenimiento) {
 
         const BicicletaDiv = document.createElement("div");
         BicicletaDiv.classList.add("bicicletas");
-        BicicletaDiv.onclick = marcarBicicleta;
 
         BicicletaDiv.appendChild(imgBici);
         BicicletaDiv.appendChild(marcaBici);
@@ -42,32 +41,3 @@ function cargarMantenimientos(mantenimiento) {
         document.querySelector("#mantenimiento").appendChild(BicicletaDiv);
     });
 }
-
-function marcarBicicleta(e) {
-
-    let bicicleta;
-
-    if (e.target.tagName === "DIV") {
-        bicicleta = e.target;
-    } else {
-        bicicleta = e.target.parentElement;
-    }
-
-    if (bicicleta.classList.contains("seleccionado")) {
-        bicicleta.classList.remove('seleccionado')
-    }else{
-        bicicleta.classList.add('seleccionado')
-    }
-
-}
-
-function eliminar() {
-    const bicicletasMarcadas = document.querySelectorAll(".seleccionado")
-
-    bicicletasMarcadas.forEach(bicicletaMarcada => {
-        bicicletaMarcada.remove();
-        bicicletaMarcada.style.borderColor = "red";
-    });
-}
-
-document.querySelector("#eliminar").onclick = eliminar;

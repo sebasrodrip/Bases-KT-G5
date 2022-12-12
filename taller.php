@@ -23,7 +23,6 @@
     <br>
 
     <a class="boton" href="agregarMantenimiento.php">Agregar</a>
-    <button id="eliminar" class="boton enviar">Eliminar</button>
 
 
 
