@@ -22,9 +22,10 @@
 
     <br>
 
-    <!-- <button id="agregar" class="boton"><a href="index.html">Agregar</a></button> -->
     <a class="boton" href="agregarMantenimiento.php">Agregar</a>
-    <!-- <a class="boton" href="/php/eliminarMantenimiento.php">Eliminar</a> -->
+    <button id="eliminar" class="boton enviar">Eliminar</button>
+
+
 
     <br><br>
 
