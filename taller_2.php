@@ -23,7 +23,7 @@
     <nav class="nav_principal contenedor">
       <a href="index.php">Inicio</a>
       <a href="bicicletas_2.php">Bicicletas</a>
-      <a href="equipo_2.php">Equipo</a>
+      <a href="equipo.html">Equipo</a>
       <a href="ubicacion_2.php">Ubicación</a>
       <a href="taller_2.php">Taller</a>
       <a href="sobreNosotros_2.php">Sobre Nosotros</a>
