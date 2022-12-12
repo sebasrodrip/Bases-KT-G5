@@ -1,6 +1,6 @@
 <?php
 // Conexión a SQL
-$conexion = mysqli_connect("localhost", "root", "", "Ciclo", 3306);
+$conexion = mysqli_connect("localhost", "root", "", "Ciclo", 3310);
 
 $sql= "SELECT * FROM bicicletas";
 

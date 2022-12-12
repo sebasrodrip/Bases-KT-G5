@@ -1,5 +1,5 @@
 <?php
-include "Conexion_bicicleta.php";
+include "Conexion.php";
 
 class Bicicleta extends Conexion
 {
