@@ -1,59 +1,94 @@
-create database electro_comp;
-use electro_comp;
+CREATE database Ciclo;
+use Ciclo;
+set SQL_SAFE_UPDATES = 0;
 
-create table productos (
-	img varchar(50) not null,
-    nombre varchar(50) not null,
-    precio decimal not null
+CREATE TABLE usuario (
+id_usuario int auto_increment not null,
+nombre varchar(20) not null,
+apellido varchar(20) not null,
+usuario varchar(20) not null,
+contrasena varchar(20) not null,
+primary key (id_usuario)
 ) engine=InnoDB;
 
-INSERT INTO productos VALUES ('gskill-aegis-8-gb-ddr4-3200.jpg', 'G.SKILL AEGIS 8 GB DDR4 3200', 19000);
-INSERT INTO productos VALUES ('teamgroup-gx1-120-gb.jpg', 'TEAMGROUP GX1 120 GB', 9900);
-INSERT INTO productos VALUES ('msi-n210-1-gb.jpg', 'MSI GEFORCE GT210 1 GB', 29000);
-INSERT INTO productos VALUES ('adata-hd680-1-tb-usb-31.jpg', 'ADATA HD680 1 TB USB 3.2', 39000);
-INSERT INTO productos VALUES ('corsair-obsidian-1000d.jpg', 'CORSAIR OBSIDIAN 1000D', 399000);
-INSERT INTO productos VALUES ('ups-apc-br1500g-1500va.jpg', 'UPS APC BR1500G 1500VA', 162000);
+CREATE TABLE mantenimientos (
+id_bicicleta int auto_increment not null,
+foto_bici varchar(20) not null,
+marca varchar(20) not null,
+arreglos varchar(200),
+id_usuario int not null,
+primary key (id_bicicleta),
+foreign key (id_usuario) references usuario(id_usuario)
+)engine=InnoDB;
 
-SELECT * FROM productos;
+create table bicicletas(
+foto_bici varchar(20) not null,
+marca varchar(20) not null,
+descripcion varchar(200)
+);
 
-set sql_safe_updates = 0;
+create table cascos(
+id_casco int auto_increment not null,
+img varchar(100) not null,
+nombre varchar(100) not null,
+precio int not null,
+primary key (id_casco));
 
-delete from productos;
+create table zapatillas(
+id_zapatilla int auto_increment not null,
+img varchar(100) not null,
+nombre varchar(100) not null,
+precio int not null,
+primary key (id_zapatilla));
 
-drop database electro_comp;
+create table gafas(
+id_gafa int auto_increment not null,
+img varchar(100) not null,
+nombre varchar(100) not null,
+precio int not null,
+primary key (id_gafa));
 
-INSERT INTO productos VALUES ('aorus-17.jpg', 'AORUS 17', 1655000);
+drop table bicicletas;
+create table bicicletas(
+id_bicicletas int auto_increment not null,
+img varchar(100) not null,
+nombre varchar(100) not null,
+precio int not null,
+primary key (id_bicicletas));
 
-create table usuarios (
-	codigo int not null auto_increment,
-    usuario varchar(50) not null,
-    clave varchar(50) not null,
-    primary key(codigo)
-) engine=InnoDB;
+INSERT INTO usuario (nombre,apellido,usuario,contrasena)
+VALUES ('Andres','Diaz','andres1','123');
 
-INSERT INTO usuarios (usuario, clave) VALUES ("Carlos777", "777");
-INSERT INTO usuarios (usuario, clave) VALUES ("Mario888", "888");
-INSERT INTO usuarios (usuario, clave) VALUES ("Ana999", "999");
+INSERT INTO mantenimientos VALUES (1,'bici_totem.jpg',
+'Totem','Ajuste de suspensión',1);
 
-SELECT * FROM usuarios;
+INSERT INTO bicicletas VALUES ('bici_totem.jpg',
+'Totem','Una poderosa bicicleta de montaña que brinda comodidad y estilo');
 
-SELECT * FROM usuarios WHERE usuario = "Carlos777";
+INSERT INTO cascos (id_casco,img,nombre,precio)
+VALUES (1, 'scott_nero_plus.jpg','Casco Scott Nero Plus (CE Y CPSC)',230000),
+(2, 'scott_supra_plus.jpg','Casco Scott Supra Plus (CE)',225000),
+(3, 'scott_centric_plus.jpg','Casco Scott Centric Plus (CE)',220000);
 
-create table ordenes (
-	numero int not null auto_increment,
-    cliente varchar(50) not null,
-	tipo_dispositivo varchar(50) not null,
-    marca varchar(50),
-    problema varchar(200) not null,
-    estado tinyint not null,
-    solucion varchar(200),
-    primary key (numero)
-) engine=InnoDB;
+INSERT INTO zapatillas (id_zapatilla,img,nombre,precio)
+VALUES (1, 'scott_road_rc_ultimate.jpg','Zapatillas Scott Road Rc Ultimate',130000),
+(2, 'scott_road_rc_python.jpg','Zapatillas Scott Road Rc Python',125000),
+(3, 'scott_road_rc_evo.jpg','Zapatillas Scott Road Rc Evo',120000);
 
-Insert into ordenes (cliente, tipo_dispositivo, marca, problema, estado, solucion) 
-values ("Daniel Torres", "Tablet", "Samsung", "No enciende", 1, null);
-    
-Insert into ordenes (cliente, tipo_dispositivo, marca, problema, estado, solucion) 
-values ("Adrian Lopez", "Celular", "Sony", "Pantalla rota", 2, "Cambio de la pantalla");
+INSERT INTO gafas (id_gafa,img,nombre,precio)
+VALUES (1, 'scott_spur.jpg','Gafas de Sol Scott Spur',30000),
+(2, 'scott_shield.jpg','Gafas de Sol Scott Shield',25000),
+(3, 'scott_vector.jpg','Gafas de Sol Scott Vector',20000);
 
-select * from ordenes;
+INSERT INTO bicicletas (id_bicicletas,img,nombre,precio)
+VALUES (1, 'rockhopper.jpg','Specialized Rockhopper',800000),
+(2, 'marlin-5.jpg','Treck Marlin-5',320000),
+(3, 'scalpel.jpg','Cannondale Scalpel',2200000),
+(4, 'orca.jpg','Orbea Orca M40',2150000),
+(5, 's-works.jpg','Specialized S-Works',3100000),
+(6, 'domane.jpg','Treck Domane SL-5',1850000);
+
+SELECT * FROM zapatillas;
+SELECT * FROM usuario;
+SELECT * FROM bicicletas;
+SELECT foto_bici as Fotografía, marca as Marca, arreglos as Arreglos_por_realizar FROM mantenimientos;
