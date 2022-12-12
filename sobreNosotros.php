@@ -1,28 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
+  session_start();
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Sobre Nosotros</title>
-</head>
-
-<body>
-    <header>
-        <div class="nav_bg">
-            <nav class="nav_principal contenedor">
-                <a href="index.html">Inicio</a>
-                <a href="bicicletas.html">Bicicletas</a>
-                <a href="equipo.php">Equipo</a>
-                <a href="ubicacion.html">Ubicación</a>
-                <a href="taller.html">Taller</a>
-                <a href="sobreNosotros.html">Sobre Nosotros</a>
-            </nav>
-        </div>
-    </header>
-
+  if(!isset($_SESSION["login"])){
+    $message = "No autorizado";
+    echo "<script type='text/javascript'>alert('$message');document.location='index.php'</script>";
+    exit();
+  }
+include "header.php";
+?>
     <section class="sobre">
         <div class="mainSobre">
             <div class="sobre-texto">
@@ -50,14 +35,7 @@
     </section>
 </body>
 
-
-<footer>
-    <div class="footer-bottom">
-        <p>Horario: Lunes a Sabado 8 AM a 5 PM / Domingos Cerrado</p>
-        <p> <img src="img/redes/fb.png" alt="Auntoventas"> FideBikes <img src="img/redes/tw.png" alt=""> FideBikes</p>
-        <p> <img src="img/redes/mail.png" alt="Auntoventas"> FideBikes@gmail.com <img src="img/redes/wp.png" alt="">
-            FideBikes: 8888-8888 <br> </p>
-    </div>
-</footer>
-
+<?php
+include "footer.php";
+?>
 </html>

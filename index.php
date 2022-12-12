@@ -6,34 +6,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  <link rel="stylesheet" href="../../style.css">
-</head>
+  <link rel="stylesheet" href="style.css">
+  <?php
+  session_start();
+
+  if(isset($_SESSION["login"])){
+    echo "<script>document.location='admin.php';</script>";
+    exit();
+  }
+  ?>
+ </head>
+
 
 <body>
 
   <header>
     <div class="nav_bg">
       <nav class="nav_principal contenedor">
-        <a href="index.html">Inicio</a>
-        <a href="bicicletas.html">Bicicletas</a>
-        <a href="equipo.php">Equipo</a>
-        <a href="ubicacion.html">Ubicación</a>
-        <a href="taller.html">Taller</a>
-        <a href="sobreNosotros.html">Sobre Nosotros</a>
+        <a href="index.php">Inicio</a>
+        <a href="bicicletas_2.php">Bicicletas</a>
+        <a href="equipo_2.php">Equipo</a>
+        <a href="ubicacion_2.php">Ubicación</a>
+        <a href="taller_2.php">Taller</a>
+        <a href="sobreNosotros_2.php">Sobre Nosotros</a>
         <button type="button" data-toggle="modal" data-target="#exampleModalCenter">
-          Cerrar sesion
+          Ingresar
         </button>
-        <svg style="text-align: right;" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-          class="bi bi-cart-fill" viewBox="0 0 16 16">
-          <path
-            d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
-        </svg>
       </nav>
     </div>
   </header>
 
 
-<!-- Modal Login 
+<!-- Modal Login -->
 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
@@ -67,7 +71,7 @@
     </div>
   </div>
 </div>
-Fin login modal-->
+<!--Fin login modal-->
 
     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-indicators">
@@ -135,6 +139,6 @@ Fin login modal-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script> <!--Cambiar jQuery slim min a solo min con este script-->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script> <!--Integrar en todos los html que contengan navbar-->
-<script src="../../JavaScript/modal.js"></script> <!--Integrar en todos los html que contengan navbar-->
+<script src="JavaScript/modal.js"></script> <!--Integrar en todos los html que contengan navbar-->
 
 </html>

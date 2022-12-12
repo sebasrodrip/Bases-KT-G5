@@ -1,7 +1,7 @@
 <?php
 include "Conexion_gafa.php";
 
-class Gafa extends Conexion_gafa
+class Gafa extends Conexion
 {
     private $id_gafa;
     private $img;

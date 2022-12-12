@@ -5,6 +5,8 @@ include "Usuario.php";
 $user = $_POST['user'];
 $pass = $_POST['pass'];
 
+$usuario = Usuario::getByUserName($user);
+
 
 if($user == "" && $pass == ""){
     ?>
@@ -24,25 +26,21 @@ if($user == "" && $pass == ""){
         Usuario vacío!
 </div>
 <?php
-}
-
-$usuario = Usuario::getByUserName($user);
-
-if(!$usuario){
+}else if(!$usuario){
     ?>
     <div class="alert alert-danger" role="alert">
         Usuario no existe!
     </div>
     <?php
-}
-
-if ($usuario->validarClave($pass)) {
+} else if ($usuario->validarClave($pass)) {
     session_start();
     $_SESSION["login"]=true;
     $_SESSION["usuario"]=$usuario->getUsuario();
     $_SESSION["codigo"]=$usuario->getCodigo();
-    header("location: ../login/pages/admin.php");
-    exit();
+    ?>
+    <script>location.href = "admin.php";</script>
+    <?php
+    exit;
 } else {
     ?>
     <div class="alert alert-warning" role="alert">

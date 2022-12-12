@@ -1,7 +1,7 @@
 <?php
 include "Conexion_casco.php";
 
-class Casco extends Conexion_casco
+class Casco extends Conexion
 {
     private $id_casco;
     private $img;

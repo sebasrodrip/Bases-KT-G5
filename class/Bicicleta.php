@@ -1,7 +1,7 @@
 <?php
 include "Conexion_bicicleta.php";
 
-class Bicicleta extends Conexion_bicicleta
+class Bicicleta extends Conexion
 {
     private $id_bicicletas;
     private $img;

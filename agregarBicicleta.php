@@ -1,32 +1,13 @@
-<!DOCTYPE html>
-<html lang="es">
+<?php
+  session_start();
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  <link rel="stylesheet" href="style.css">
-  <title>Agregar Bicicleta</title>
-</head>
-
-<body>
-  <header>
-    <div class="nav_bg">
-      <nav class="nav_principal contenedor">
-        <a href="index.html">Inicio</a>
-        <a href="bicicletas.html">Bicicletas</a>
-        <a href="equipo.php">Equipo</a>
-        <a href="ubicacion.html">Ubicación</a>
-        <a href="taller.html">Taller</a>
-        <a href="sobreNosotros.html">Sobre Nosotros</a>
-      </nav>
-    </div>
-  </header>
+  if(!isset($_SESSION["login"])){
+    $message = "No autorizado";
+    echo "<script type='text/javascript'>alert('$message');document.location='index.php'</script>";
+    exit();
+  }
+  include "header.php";
+  ?>
 
   <img src="img/banner.jpg" class="banner-img" alt="">
   <br><br>
