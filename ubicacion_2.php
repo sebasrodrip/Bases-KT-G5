@@ -9,9 +9,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <title>Ubicación</title>
+    <?php
+  session_start();
+
+  if (isset($_SESSION["login"])) {
+    echo "<script>document.location='admin.php';</script>";
+    exit();
+  }
+  ?>
+
 </head>
 
 <body class="ubicacionIMG">
@@ -20,7 +29,7 @@
       <nav class="nav_principal contenedor">
         <a href="index.php">Inicio</a>
         <a href="bicicletas_2.php">Bicicletas</a>
-        <a href="equipo.html">Equipo</a>
+        <a href="equipo_2.php">Equipo</a>
         <a href="ubicacion_2.php">Ubicación</a>
         <a href="taller_2.php">Taller</a>
         <a href="sobreNosotros_2.php">Sobre Nosotros</a>
