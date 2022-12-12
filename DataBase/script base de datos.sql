@@ -62,9 +62,6 @@ VALUES ('Andres','Diaz','andres1','123');
 INSERT INTO mantenimientos VALUES (1,'bici_totem.jpg',
 'Totem','Ajuste de suspensión',1);
 
-INSERT INTO bicicletas VALUES ('bici_totem.jpg',
-'Totem','Una poderosa bicicleta de montaña que brinda comodidad y estilo');
-
 INSERT INTO cascos (id_casco,img,nombre,precio)
 VALUES (1, 'scott_nero_plus.jpg','Casco Scott Nero Plus (CE Y CPSC)',230000),
 (2, 'scott_supra_plus.jpg','Casco Scott Supra Plus (CE)',225000),
@@ -81,12 +78,12 @@ VALUES (1, 'scott_spur.jpg','Gafas de Sol Scott Spur',30000),
 (3, 'scott_vector.jpg','Gafas de Sol Scott Vector',20000);
 
 INSERT INTO bicicletas (id_bicicletas,img,nombre,precio)
-VALUES (1, 'rockhopper.jpg','Specialized Rockhopper',800000),
-(2, 'marlin-5.jpg','Treck Marlin-5',320000),
-(3, 'scalpel.jpg','Cannondale Scalpel',2200000),
-(4, 'orca.jpg','Orbea Orca M40',2150000),
-(5, 's-works.jpg','Specialized S-Works',3100000),
-(6, 'domane.jpg','Treck Domane SL-5',1850000);
+VALUES (11, 'rockhopper.jpg','Specialized Rockhopper',800000),
+(22, 'marlin-5.jpg','Treck Marlin-5',320000),
+(33, 'scalpel.jpg','Cannondale Scalpel',2200000),
+(44, 'orca.jpg','Orbea Orca M40',2150000),
+(55, 's-works.jpg','Specialized S-Works',3100000),
+(66, 'domane.jpg','Treck Domane SL-5',1850000);
 
 SELECT * FROM zapatillas;
 SELECT * FROM usuario;

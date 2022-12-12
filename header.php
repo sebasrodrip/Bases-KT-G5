@@ -15,7 +15,7 @@
       <nav class="nav_principal contenedor">
         <a href="index.php">Inicio</a>
         <a href="bicicletas.php">Bicicletas</a>
-        <a href="equipo.php">Equipo</a>
+        <a href="equipo_2.php">Equipo</a>
         <a href="ubicacion.php">Ubicación</a>
         <a href="taller.php">Taller</a>
         <a href="sobreNosotros.php">Sobre Nosotros</a>

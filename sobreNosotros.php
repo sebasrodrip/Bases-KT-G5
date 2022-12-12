@@ -27,7 +27,7 @@ include "header.php";
                             Otro de los objetivos del ciclo es garantizar la calidad de nuestros procesos y servicios
                             para lograr una fuerte presencia y el
                             reconocimiento internacional de nuestras marcas y la amplia gama de productos. </p>
-                        <button class="sobreBoton">Contáctanos</button>
+                        <!-- <button class="sobreBoton">Contáctanos</button> -->
                     </div>
             </div>
         </div>

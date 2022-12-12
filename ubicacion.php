@@ -8,7 +8,7 @@
   }
   include "header.php";
   ?>
-
+<body class="ubicacionIMG">
     <h1
         style="text-align:center; padding-top: 15px; padding-bottom: 10px; font-family: sans-serif; font-size: 42px; font-style: italic;">
         Estamos Ubicados en:</h1>

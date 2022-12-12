@@ -3,20 +3,22 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="style.css">
     <title>Sobre Nosotros</title>
-    <?php
+    <!-- <?php
     session_start();
   
     if(isset($_SESSION["login"])){
       echo "<script>document.location='admin.php';</script>";
       exit();
     }
-    ?>
+    ?> -->
 </head>
 
 <body>
@@ -25,7 +27,7 @@
       <nav class="nav_principal contenedor">
         <a href="index.php">Inicio</a>
         <a href="bicicletas_2.php">Bicicletas</a>
-        <a href="equipo_2.php">Equipo</a>
+        <a href="equipo.html">Equipo</a>
         <a href="ubicacion_2.php">Ubicación</a>
         <a href="taller_2.php">Taller</a>
         <a href="sobreNosotros_2.php">Sobre Nosotros</a>
@@ -92,7 +94,7 @@
                             Otro de los objetivos del ciclo es garantizar la calidad de nuestros procesos y servicios
                             para lograr una fuerte presencia y el
                             reconocimiento internacional de nuestras marcas y la amplia gama de productos. </p>
-                        <button class="sobreBoton">Contáctanos</button>
+                        <!-- <button class="sobreBoton">Contáctanos</button> -->
                     </div>
             </div>
         </div>
@@ -100,18 +102,7 @@
     </section>
 </body>
 
-
-<footer>
-    <div class="footer-bottom">
-        <p>Horario: Lunes a Sabado 8 AM a 5 PM / Domingos Cerrado</p>
-        <p> <img src="img/redes/fb.png" alt="Auntoventas"> FideBikes <img src="img/redes/tw.png" alt=""> FideBikes</p>
-        <p> <img src="img/redes/mail.png" alt="Auntoventas"> FideBikes@gmail.com <img src="img/redes/wp.png" alt="">
-            FideBikes: 8888-8888 <br> </p>
-    </div>
-</footer>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script> <!--Cambiar jQuery slim min a solo min con este script-->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script> <!--Integrar en todos los html que contengan navbar-->
-<script src="JavaScript/modal.js"></script> <!--Integrar en todos los html que contengan navbar-->
+<?php
+include "footer.php";
+?>
 </html>
