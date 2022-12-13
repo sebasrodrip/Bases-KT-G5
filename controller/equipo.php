@@ -16,7 +16,7 @@ if ($_POST["cat_equipo"] == "Casco") {
     $respuesta = $casco->create();
 
     if ($respuesta == "OK") {
-        header("location: ../equipo.php?codigo=1");
+        header("location: ../equipo_2.php?codigo=1");
         exit();
     }
 }
@@ -32,7 +32,7 @@ if ($_POST["cat_equipo"] == "Gafas") {
     $respuesta = $gafa->create();
 
     if ($respuesta == "OK") {
-        header("location: ../equipo.php?codigo=1");
+        header("location: ../equipo_2.php?codigo=1");
         exit();
     }
 }
@@ -48,10 +48,10 @@ if ($_POST["cat_equipo"] == "Zapatillas") {
     $respuesta = $zapatilla->create();
 
     if ($respuesta == "OK") {
-        header("location: ../equipo.php?codigo=1");
+        header("location: ../equipo_2.php?codigo=1");
         exit();
     }
 }
 
-header("location: ../equipo.php?codigo=4&error=" . $respuesta);
+header("location: ../equipo_2.php?codigo=4&error=" . $respuesta);
 exit();

@@ -24,7 +24,7 @@
           <img src="img\addict_4.jpg" class="d-block w-100" alt="...">
           <div class="carousel-caption d-none d-md-block">
             <h3 style="font-size: 36px">Bicicletas</h3>
-            <a class="link_index" href="bicicletas.html">
+            <a class="link_index" href="bicicletas.php">
               <p>Ver Bicicletas</p>
             </a>
           </div>
@@ -33,7 +33,7 @@
           <img src="img\casco.jpg" class="d-block w-100" alt="...">
           <div class="carousel-caption d-none d-md-block">
             <h3 style="font-size: 36px">Equipo</h3>
-            <a class="link_index" href="equipo.html">
+            <a class="link_index" href="equipo_2.php">
               <p>Ver Equipo</p>
             </a>
           </div>
@@ -42,7 +42,7 @@
           <img src="img\taller.jpg" class="d-block w-100" alt="...">
           <div class="carousel-caption d-none d-md-block">
             <h3 style="font-size: 36px">Taller</h3>
-            <a class="link_index" href="taller.html">
+            <a class="link_index" href="taller.php">
               <p>Ver Taller</p>
             </a>
           </div>
