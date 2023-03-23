@@ -1,60 +1,61 @@
-CREATE database Ciclo;
-use Ciclo;
-set SQL_SAFE_UPDATES = 0;
-
 CREATE TABLE usuario (
-id_usuario int auto_increment not null,
-nombre varchar(20) not null,
-apellido varchar(20) not null,
-usuario varchar(20) not null,
-contrasena varchar(20) not null,
-primary key (id_usuario)
-) engine=InnoDB;
-
-CREATE TABLE mantenimientos (
-id_bicicleta int auto_increment not null,
-foto_bici varchar(20) not null,
-marca varchar(20) not null,
-arreglos varchar(200),
-id_usuario int not null,
-primary key (id_bicicleta),
-foreign key (id_usuario) references usuario(id_usuario)
-)engine=InnoDB;
-
-create table bicicletas(
-foto_bici varchar(20) not null,
-marca varchar(20) not null,
-descripcion varchar(200)
+id_usuario number GENERATED ALWAYS AS IDENTITY not null,
+nombre varchar2(20) not null,
+apellido varchar2(20) not null,
+usuario varchar2(20) not null,
+contrasena varchar2(20) not null,
+constraint pk_usuario primary key (id_usuario)
 );
 
-create table cascos(
-id_casco int auto_increment not null,
-img varchar(100) not null,
-nombre varchar(100) not null,
-precio int not null,
-primary key (id_casco));
+CREATE TABLE mantenimientos (
+id_bicicleta number GENERATED ALWAYS AS IDENTITY not null,
+foto_bici varchar2(20) not null,
+marca varchar2(20) not null,
+arreglos varchar2(200),
+id_usuario number not null,
+constraint pk_bicicleta primary key (id_bicicleta),
+constraint fk_usuario foreign key (id_usuario) references usuario(id_usuario)
+);
 
-create table zapatillas(
-id_zapatilla int auto_increment not null,
-img varchar(100) not null,
-nombre varchar(100) not null,
-precio int not null,
-primary key (id_zapatilla));
+CREATE TABLE bicicletas(
+id_bicicletas number GENERATED ALWAYS AS IDENTITY not null,
+img varchar2(100) not null,
+nombre varchar2(100) not null,
+precio number not null,
+constraint pk_bicicletas primary key (id_bicicletas)
+);
 
-create table gafas(
-id_gafa int auto_increment not null,
-img varchar(100) not null,
-nombre varchar(100) not null,
-precio int not null,
-primary key (id_gafa));
+CREATE TABLE cascos(
+id_casco number GENERATED ALWAYS AS IDENTITY not null,
+img varchar2(100) not null,
+nombre varchar2(100) not null,
+precio number not null,
+constraint pk_cascos primary key (id_casco)
+);
 
-drop table bicicletas;
-create table bicicletas(
-id_bicicletas int auto_increment not null,
-img varchar(100) not null,
-nombre varchar(100) not null,
-precio int not null,
-primary key (id_bicicletas));
+CREATE TABLE zapatillas(
+id_zapatilla number GENERATED ALWAYS AS IDENTITY not null,
+img varchar2(100) not null,
+nombre varchar2(100) not null,
+precio number not null,
+constraint pk_zapatillas primary key (id_zapatilla)
+);
+
+CREATE TABLE gafas(
+id_gafa number GENERATED ALWAYS AS IDENTITY not null,
+img varchar2(100) not null,
+nombre varchar2(100) not null,
+precio number not null,
+constraint pk_gafas primary key (id_gafa)
+);
+
+CREATE TABLE bicicletas(
+id_bicicletas number GENERATED ALWAYS AS IDENTITY not null,
+img varchar2(100) not null,
+nombre varchar2(100) not null,
+precio number not null,
+constraint pk_bicicletas primary key (id_bicicletas)
+);
 
 INSERT INTO usuario (nombre,apellido,usuario,contrasena)
 VALUES ('Andres','Diaz','andres1','123');
@@ -85,7 +86,3 @@ VALUES (11, 'rockhopper.jpg','Specialized Rockhopper',800000),
 (55, 's-works.jpg','Specialized S-Works',3100000),
 (66, 'domane.jpg','Treck Domane SL-5',1850000);
 
-SELECT * FROM zapatillas;
-SELECT * FROM usuario;
-SELECT * FROM bicicletas;
-SELECT foto_bici as Fotografía, marca as Marca, arreglos as Arreglos_por_realizar FROM mantenimientos;
