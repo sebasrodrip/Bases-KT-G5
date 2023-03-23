@@ -68,4 +68,3 @@ id_factura number not null,
 constraint pk_bicicleta primary key (id_bicicleta),
 constraint fk_factura foreign key (id_factura) references facturas(id_factura)
 );
-
