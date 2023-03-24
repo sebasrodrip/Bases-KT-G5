@@ -49,11 +49,15 @@ id_factura number not null,
 cantidad number not null,
 precio number,
 id_usuario number not null,
+id_producto number not null,
+id_bicicletas number not null,
 constraint pk_detalle primary key (id_detalle),
 constraint pk_facturaDetalle foreign key (id_factura) references facturas(id_factura),
-constraint fk_usuarioDetalle foreign key (id_usuario) references usuario(id_usuario)
-);
+constraint fk_usuarioDetalle foreign key (id_usuario) references usuario(id_usuario),
+constraint fk_productoDetalle foreign key (id_producto) references productos(id_producto),
+constraint fk_bicicletasDetalle foreign key (id_bicicletas) references bicicletas(id_bicicletas)
 
+);
 CREATE TABLE ventas(
 id_venta number GENERATED ALWAYS AS IDENTITY not null,
 id_factura number not null,
