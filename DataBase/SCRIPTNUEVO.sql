@@ -31,7 +31,7 @@ constraint pk_proveedor primary key (id_proveedor)
 CREATE TABLE facturas (
 id_factura number GENERATED ALWAYS AS IDENTITY not null,
 id_usuario number not null,
-constraint pk_bicicleta primary key (id_bicicleta),
+constraint pk_factura primary key (id_factura),
 constraint fk_usuario foreign key (id_usuario) references usuario(id_usuario)
 );
 
@@ -45,12 +45,12 @@ constraint pk_producto primary key (id_producto)
 
 CREATE TABLE detalle_factura (
 id_detalle number GENERATED ALWAYS AS IDENTITY not null,
-id_Factura number not null,
+id_factura number not null,
 cantidad number not null,
 precio number,
 id_usuario number not null,
-constraint fk_detalle primary key (id_bicicleta),
-constraint fk_factura primary key (id_factura),
+constraint fk_detalle primary key (id_detalle),
+constraint fk_factura foreign key (id_factura) references facturas(id_factura),
 constraint fk_usuario foreign key (id_usuario) references usuario(id_usuario)
 );
 
@@ -58,13 +58,14 @@ CREATE TABLE ventas(
 id_venta number GENERATED ALWAYS AS IDENTITY not null,
 id_factura number not null,
 constraint pk_venta primary key (id_venta),
-constraint fk_factura foreign key (id_factura) references facturass(id_factura)
+constraint fk_factura foreign key (id_factura) references facturas(id_factura)
 );
 
 CREATE TABLE mantenimientos (
-id_mantenimientos number GENERATED ALWAYS AS IDENTITY not null,
+id_mantenimiento number GENERATED ALWAYS AS IDENTITY not null,
+id_venta number not null,
 arreglos varchar2(200),
 id_factura number not null,
-constraint pk_bicicleta primary key (id_bicicleta),
+constraint pk_mantenimiento primary key (id_mantenimiento),
 constraint fk_factura foreign key (id_factura) references facturas(id_factura)
 );
