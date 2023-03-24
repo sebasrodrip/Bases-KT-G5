@@ -50,8 +50,8 @@ cantidad number not null,
 precio number,
 id_usuario number not null,
 constraint pk_detalle primary key (id_detalle),
-constraint pk_factura foreign key (id_factura) references facturas(id_factura),
-constraint fk_usuario foreign key (id_usuario) references usuario(id_usuario)
+constraint pk_facturaDetalle foreign key (id_factura) references facturas(id_factura),
+constraint fk_usuarioDetalle foreign key (id_usuario) references usuario(id_usuario)
 );
 
 CREATE TABLE ventas(
@@ -67,6 +67,6 @@ id_venta number not null,
 arreglos varchar2(200),
 id_factura number not null,
 constraint pk_mantenimiento primary key (id_mantenimiento),
-constraint fk_factura foreign key (id_factura) references facturas(id_factura)
+constraint fk_facturaMantenimientos foreign key (id_factura) references facturas(id_factura)
 );
 
