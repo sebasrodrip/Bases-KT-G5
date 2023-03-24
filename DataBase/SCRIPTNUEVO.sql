@@ -265,6 +265,8 @@ SELECT id_bicicletas, img, nombre, precio FROM bicicletas;
 
 CREATE VIEW VISTA_USUARIOS AS
 SELECT id_proveedor, nombre FROM proveedores;
+CREATE VIEW VISTA_MANTENIMIENTOS AS
+SELECT id_mantenimiento,id_venta,arreglos,id_factura from mantenimientos;
 
 EXECUTE INSERT_PROVEEDOR ('NANOBICI');
 SELECT * FROM PROVEEDORES;
