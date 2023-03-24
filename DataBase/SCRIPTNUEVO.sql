@@ -250,3 +250,21 @@ BEGIN
   ELSE
     DELETE FROM categorias WHERE id_categoria = ID1;
  END IF;
+
+
+ /*    VISTAS    */
+
+ CREATE VIEW VISTA_PROVEEDORES AS
+SELECT id_proveedor, nombre FROM proveedores;
+
+CREATE VIEW VISTA_CATEGORIAS AS
+SELECT id_categoria, descripcion FROM categorias;
+
+CREATE VIEW VISTA_BICICLETAS AS
+SELECT id_bicicletas, img, nombre, precio FROM bicicletas;
+
+CREATE VIEW VISTA_USUARIOS AS
+SELECT id_proveedor, nombre FROM proveedores;
+
+EXECUTE INSERT_PROVEEDOR ('NANOBICI');
+SELECT * FROM PROVEEDORES;
