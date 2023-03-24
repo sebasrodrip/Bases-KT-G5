@@ -49,8 +49,8 @@ id_factura number not null,
 cantidad number not null,
 precio number,
 id_usuario number not null,
-constraint fk_detalle primary key (id_detalle),
-constraint fk_factura foreign key (id_factura) references facturas(id_factura),
+constraint pk_detalle primary key (id_detalle),
+constraint pk_factura foreign key (id_factura) references facturas(id_factura),
 constraint fk_usuario foreign key (id_usuario) references usuario(id_usuario)
 );
 
@@ -69,3 +69,4 @@ id_factura number not null,
 constraint pk_mantenimiento primary key (id_mantenimiento),
 constraint fk_factura foreign key (id_factura) references facturas(id_factura)
 );
+
