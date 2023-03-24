@@ -174,3 +174,40 @@ BEGIN
         DELETE FROM BICICLETAS WHERE ID_BICICLETAS = ID1;
     END IF;
 END;
+
+/* ****** Store Procedure PROVEEDORES ***** */
+
+CREATE OR REPLACE PROCEDURE INSERT_PROVEEDOR(nombre1 VARCHAR2)
+AS
+BEGIN
+INSERT INTO proveedores(nombre) VALUES (nombre1);
+END;
+
+/* UPDATE ----------- */
+CREATE OR REPLACE PROCEDURE UPDATE_PROVEEDOR (ID1 INT , nombre1 VARCHAR2)
+AS
+PROVEEDOR_COUNT INT;
+BEGIN
+  SELECT COUNT(proveedores.id_proveedor) INTO PROVEEDOR_COUNT FROM proveedores WHERE id_proveedor = ID1;
+  IF PROVEEDOR_COUNT = 0 OR (LENGTH(nombre1)> 100)
+  THEN
+        RETURN;
+  ELSE
+        UPDATE proveedores SET nombre = nombre1 WHERE id_proveedor = ID1;
+    END IF;
+END;
+
+/* DELETE ----------- */
+
+CREATE OR REPLACE PROCEDURE DELETE_PROVEEDOR(ID1 INT)
+AS
+PROVEEDOR_COUNT INT;
+BEGIN
+  SELECT COUNT(proveedores.id_proveedor) INTO PROVEEDOR_COUNT FROM proveedores WHERE id_proveedor = ID1;
+  IF PROVEEDOR_COUNT = 0 
+  THEN
+    RETURN;
+  ELSE
+    DELETE FROM proveedores WHERE id_proveedor = ID1;
+ END IF;
+END;
